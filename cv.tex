@@ -1,0 +1,113 @@
+\documentclass[a4paper]{article}
+
+\usepackage[
+    top=0.79in,
+    bottom=0.79in,
+    left=0.79in,
+    right=0.79in,
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{10pt}
+\newlength{\tablewidth}
+
+\setlist[itemize]{topsep=0em, itemsep=0.0em}
+\setlist[itemize,1]{before=\vspace{-1em}}
+
+\newenvironment{period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.75\tablewidth}>{\raggedleft\arraybackslash}p{0.25\tablewidth}@{}}%
+#1 \newline
+\begin{itemize}
+}{%
+\end{itemize} & \sarma \\%
+\end{tabular}\\
+}
+
+\newenvironment{skills}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.15\tablewidth}p{0.85\tablewidth}@{}}
+}{%
+\end{tabular}
+}
+
+\titleformat{\section}{\uppercase}{}{0pt}{}[{\vspace{0.5em}\titlerule}]
+\titleformat{\subsection}{\bf}{}{0pt}{}{}
+\titlespacing{\section}{0pt}{1em}{0.5em}
+\titlespacing{\subsection}{0pt}{0pt}{0.1em}
+
+\begin{document}
+\fontfamily{\sfdefault}
+\selectfont
+
+\begin{minipage}{.5\textwidth}
+\LARGE{Sven Almer}\\
+\normalsize{55 ulica Cvijete Zuzorić, 10000 Zagreb, Croatia}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\raggedleft
+\href{mailto:ime.prezime@gmail.com}{sven.almer@fer.hr} \\
++385 99 678 1647 \\
+\href{https://github.com/iprezime}{github.com/svenalmer}
+\end{minipage}
+
+\vspace{1em}
+
+\section{work experience}
+\subsection{University of Zagreb, Faculty of Electrical Engineering and Computing, Croatia}
+\begin{period}{Team member}{Feb 2019 -- May 2019}
+\item Was part of a team of 5 students in \textit{Management in Engineering} class project
+\item Contributed to planning a hypothetical project; Provided cost and work distribution analyses
+\end{period}
+
+\section{education}
+\subsection{University of Zagreb, Faculty of Electrical Engineering and Computing, Croatia}
+\begin{period}{Pursuing BSc in Computer Science}{Sep 2018 -- May 2021\linebreak(expected)}
+    \item relevant courses:
+        \textit{Introduction to Programming},
+        \textit{Object Oriented Programming},
+        \textit{Algorithms and Data Structures},
+        \textit{Databases}
+\end{period}
+\subsection{XV. Gymnasium, Zagreb, Croatia}
+\begin{period}{Mathematics and Natural Science Gymnasium}{Sep 2014 -- May 2018}
+\item Used to working in groups
+\end{period}
+
+\section{major achievements}
+\begin{skills}
+    Sports   &   Multiple ice hockey National gold medals (between 2010 and 2014)
+\end{skills}
+
+\section{technical skills}
+\begin{skills}
+    Intermediate &
+    \begin{itemize}
+        \item \textbf{Java} -- used in university courses
+        \item \textbf{C} -- used in university courses 
+    \end{itemize} \\
+    Basic &
+    \begin{itemize}
+        \item \textbf{C++} -- used in university courses
+        \item \textbf{Python} -- used in university courses
+        \item \textbf{SQL} -- used in university courses
+        \item \textbf{GIT} -- used privately
+    \end{itemize} \\
+\end{skills}
+
+\section{other skills and interests}
+\begin{skills}
+    Languages & Croatian (native), English (fluent), German (basic) \\
+    Interests & Video Games, Nutrition and Exercise \\
+\end{skills}
+
+\end{document}
